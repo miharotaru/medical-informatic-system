@@ -82,6 +82,20 @@ using BlazorCRUD.Data;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\Pages\MedicComponents\UpdateMedic.razor"
+using BlazorCRUD.Data.Classes;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\Pages\MedicComponents\UpdateMedic.razor"
+using BlazorCRUD.Data.Repositories;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/update-medic/{CurrentID}")]
     public partial class UpdateMedic : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -91,26 +105,25 @@ using BlazorCRUD.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 43 "C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\Pages\MedicComponents\UpdateMedic.razor"
-       
-    [Parameter]
-    public string CurrentID { get; set; }
-    Medic objMedic = new Medic();
+#line 45 "C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\Pages\MedicComponents\UpdateMedic.razor"
+        [Parameter]
+            public string CurrentID { get; set; }
+            Medic objMedic = new Medic();
 
-    protected override async Task OnInitializedAsync()
-    {
-        objMedic = await Task.Run(()=>medicRepository.GetMedicById(Convert.ToInt32(CurrentID)));
-    }
+            protected override async Task OnInitializedAsync()
+            {
+                objMedic = await Task.Run(() => medicRepository.GetMedicById(Convert.ToInt32(CurrentID)));
+            }
 
-    protected void UpdateMedicInfo()
-    {
-        medicRepository.UpdateMedic(objMedic);
-        NavigationManager.NavigateTo("MedicList");
-    }
-    void Cancel()
-    {
-        NavigationManager.NavigateTo("MedicList");
-    }
+            protected void UpdateMedicInfo()
+            {
+                medicRepository.UpdateMedic(objMedic);
+                NavigationManager.NavigateTo("MedicList");
+            }
+            void Cancel()
+            {
+                NavigationManager.NavigateTo("MedicList");
+            } 
 
 #line default
 #line hidden

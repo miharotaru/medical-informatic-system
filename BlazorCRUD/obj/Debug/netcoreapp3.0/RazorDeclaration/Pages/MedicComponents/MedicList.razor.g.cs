@@ -82,6 +82,20 @@ using BlazorCRUD.Data;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\Pages\MedicComponents\MedicList.razor"
+using BlazorCRUD.Data.Classes;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\Pages\MedicComponents\MedicList.razor"
+using BlazorCRUD.Data.Repositories;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/medic")]
     public partial class MedicList : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -91,13 +105,12 @@ using BlazorCRUD.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 47 "C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\Pages\MedicComponents\MedicList.razor"
+#line 48 "C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\Pages\MedicComponents\MedicList.razor"
         List<Medic> objMedics;
     protected override async Task OnInitializedAsync()
     {
         objMedics = await Task.Run(() => medicRepository.GetMedics());
     }
-      
 
 #line default
 #line hidden
