@@ -9,4 +9,7 @@ This is a starter project for creating a Blazor Server SPA with Entity Framework
 
 This should be all! Have fun making your own SPA with Blazor Server!
 
+## Technologies
+* ASP.NET Core 5.0, C#, Blazor Server, LINQ, Entity Framework Core, Bootstrap, HTML, CSS, Razor Pages, SQL Server
+
 
