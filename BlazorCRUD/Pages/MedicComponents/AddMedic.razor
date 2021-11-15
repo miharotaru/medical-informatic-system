@@ -37,14 +37,15 @@
     </div>
 </form>
 
-@code { Medic objMedic = new Medic();
+@code {
+    Medic objMedic = new Medic();
 
-            protected void CreateMedic()
-            {
-                medicRepository.Create(objMedic);
-                NavigationManager.NavigateTo("Medic");
-            }
-            void Cancel()
-            {
-                NavigationManager.NavigateTo("Medic");
-            } }
+    protected void CreateMedic()
+    {
+        medicRepository.CreateMedic(objMedic);
+        NavigationManager.NavigateTo("MedicList");
+    }
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("MedicList");
+    } }

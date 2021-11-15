@@ -82,6 +82,13 @@ using BlazorCRUD.Data;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\Pages\MedicComponents\AddMedic.razor"
+using BlazorCRUD.Data.Classes;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/add-medic")]
     public partial class AddMedic : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -91,18 +98,19 @@ using BlazorCRUD.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 40 "C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\Pages\MedicComponents\AddMedic.razor"
-        Medic objMedic = new Medic();
+#line 41 "C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\Pages\MedicComponents\AddMedic.razor"
+       
+    Medic objMedic = new Medic();
 
-            protected void CreateMedic()
-            {
-                medicRepository.Create(objMedic);
-                NavigationManager.NavigateTo("Medic");
-            }
-            void Cancel()
-            {
-                NavigationManager.NavigateTo("Medic");
-            } 
+    protected void CreateMedic()
+    {
+        medicRepository.CreateMedic(objMedic);
+        NavigationManager.NavigateTo("MedicList");
+    }
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("MedicList");
+    } 
 
 #line default
 #line hidden

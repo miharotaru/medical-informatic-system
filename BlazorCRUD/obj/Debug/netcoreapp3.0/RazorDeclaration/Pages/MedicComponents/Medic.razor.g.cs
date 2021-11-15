@@ -93,10 +93,10 @@ using BlazorCRUD.Data;
 #nullable restore
 #line 47 "C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\Pages\MedicComponents\Medic.razor"
         List<Medic> objMed;
-            protected override async Task OnInitializedAsync()
-            {
-                objMed = await Task.Run(() => medicRepository.GetEmployee());
-            }
+    protected override async Task OnInitializedAsync()
+    {
+        objMed = await Task.Run(() => medicRepository.GetMedics());
+    }
       
 
 #line default

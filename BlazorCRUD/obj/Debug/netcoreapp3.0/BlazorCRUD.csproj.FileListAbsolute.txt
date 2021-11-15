@@ -339,3 +339,23 @@ C:\BLAZOR Licence\BlazorCRUD\obj\Debug\netcoreapp3.0\staticwebassets\BlazorCRUD.
 C:\BLAZOR Licence\BlazorCRUD\obj\Debug\netcoreapp3.0\BlazorCRUD.dll
 C:\BLAZOR Licence\BlazorCRUD\obj\Debug\netcoreapp3.0\BlazorCRUD.pdb
 C:\BLAZOR Licence\BlazorCRUD\obj\Debug\netcoreapp3.0\BlazorCRUD.genruntimeconfig.cache
+C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\obj\Debug\netcoreapp3.0\BlazorCRUD.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\obj\Debug\netcoreapp3.0\BlazorCRUD.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\obj\Debug\netcoreapp3.0\BlazorCRUD.AssemblyInfo.cs
+C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\obj\Debug\netcoreapp3.0\BlazorCRUD.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\obj\Debug\netcoreapp3.0\BlazorCRUD.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\obj\Debug\netcoreapp3.0\BlazorCRUD.RazorComponent.input.cache
+C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\obj\Debug\netcoreapp3.0\RazorDeclaration\App.razor.g.cs
+C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\obj\Debug\netcoreapp3.0\RazorDeclaration\Pages\Error.razor.g.cs
+C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\obj\Debug\netcoreapp3.0\RazorDeclaration\Pages\Index.razor.g.cs
+C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\obj\Debug\netcoreapp3.0\RazorDeclaration\Pages\MedicComponents\AddMedic.razor.g.cs
+C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\obj\Debug\netcoreapp3.0\RazorDeclaration\Pages\MedicComponents\DeleteMedic.razor.g.cs
+C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\obj\Debug\netcoreapp3.0\RazorDeclaration\Pages\MedicComponents\Medic.razor.g.cs
+C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\obj\Debug\netcoreapp3.0\RazorDeclaration\Pages\MedicComponents\UpdateMedic.razor.g.cs
+C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\obj\Debug\netcoreapp3.0\RazorDeclaration\Shared\MainLayout.razor.g.cs
+C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\obj\Debug\netcoreapp3.0\RazorDeclaration\Shared\NavMenu.razor.g.cs
+C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\obj\Debug\netcoreapp3.0\RazorDeclaration\_Imports.razor.g.cs
+C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\obj\Debug\netcoreapp3.0\BlazorCRUD.RazorComponent.output.cache
+C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\obj\Debug\netcoreapp3.0\BlazorCRUD.dll
+C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\obj\Debug\netcoreapp3.0\BlazorCRUD.pdb
+C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\obj\Debug\netcoreapp3.0\RazorDeclaration\Pages\MedicComponents\MedicList.razor.g.cs

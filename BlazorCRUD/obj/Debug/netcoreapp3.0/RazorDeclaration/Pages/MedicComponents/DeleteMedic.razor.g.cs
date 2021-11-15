@@ -99,17 +99,17 @@ using BlazorCRUD.Data;
 
     protected override async Task OnInitializedAsync()
     {
-        objMedic = await Task.Run(() => medicRepository.GetEmployeeById(Convert.ToInt32(CurrentID)));
+        objMedic = await Task.Run(() => medicRepository.GetMedicById(Convert.ToInt32(CurrentID)));
     }
 
     protected void DeleteMedicInfo()
     {
         medicRepository.DeleteEmpInfo(objMedic);
-        NavigationManager.NavigateTo("Medic");
+        NavigationManager.NavigateTo("MedicList");
     }
     void Cancel()
     {
-        NavigationManager.NavigateTo("Medic");
+        NavigationManager.NavigateTo("MedicList");
     }
 
 #line default

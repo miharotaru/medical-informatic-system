@@ -7,7 +7,7 @@
 </NavLink>
 
 <h1>Medics Information</h1>
-@if (objMed == null)
+@if (objMedics == null)
 {
 <p><em>Loading....</em></p> }
             else
@@ -23,7 +23,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var med in objMed)
+        @foreach (var med in objMedics)
         {
 <tr>
     <td>@med.MedicId</td>
@@ -44,9 +44,9 @@
     </tbody>
 </table>}
 
-@code { List<Medic> objMed;
-            protected override async Task OnInitializedAsync()
-            {
-                objMed = await Task.Run(() => medicRepository.GetEmployee());
-            }
+@code { List<Medic> objMedics;
+    protected override async Task OnInitializedAsync()
+    {
+        objMedics = await Task.Run(() => medicRepository.GetMedics());
+    }
       }

@@ -43,20 +43,20 @@
 @code {
     [Parameter]
     public string CurrentID { get; set; }
-    Medic objMed = new Medic();
+    Medic objMedic = new Medic();
 
     protected override async Task OnInitializedAsync()
     {
-        objMed = await Task.Run(()=>medicRepository.GetMedicById(Convert.ToInt32(CurrentID)));
+        objMedic = await Task.Run(()=>medicRepository.GetMedicById(Convert.ToInt32(CurrentID)));
     }
 
     protected void UpdateMedicInfo()
     {
-        medicRepository.UpdateMedic(objMed);
-        NavigationManager.NavigateTo("Medic");
+        medicRepository.UpdateMedic(objMedic);
+        NavigationManager.NavigateTo("MedicList");
     }
     void Cancel()
     {
-        NavigationManager.NavigateTo("Medic");
+        NavigationManager.NavigateTo("MedicList");
     }
 }
