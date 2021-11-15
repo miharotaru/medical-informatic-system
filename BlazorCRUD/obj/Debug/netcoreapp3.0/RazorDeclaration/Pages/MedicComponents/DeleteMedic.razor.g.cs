@@ -116,7 +116,7 @@ using BlazorCRUD.Data;
 #line hidden
 #nullable disable
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private EmployeeService objEmpService { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private MedicRepository objEmpService { get; set; }
     }
 }
 #pragma warning restore 1591

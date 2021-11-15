@@ -91,19 +91,17 @@ using BlazorCRUD.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 52 "C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\Pages\MedicComponents\Medic.razor"
-       
-
-    List<Medic> objEmp;
-    protected override async Task OnInitializedAsync()
-    {
-        objEmp = await Task.Run(()=>objEmpService.GetEmployee());
-    }
+#line 49 "C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\Pages\MedicComponents\Medic.razor"
+        List<Medic> objEmp;
+            protected override async Task OnInitializedAsync()
+            {
+                objEmp = await Task.Run(() => objEmpService.GetEmployee());
+            } 
 
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private EmployeeService objEmpService { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private MedicRepository medicRepository { get; set; }
     }
 }
 #pragma warning restore 1591
