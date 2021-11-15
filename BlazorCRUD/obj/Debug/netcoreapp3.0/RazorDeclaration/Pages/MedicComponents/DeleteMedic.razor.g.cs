@@ -82,7 +82,21 @@ using BlazorCRUD.Data;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/DeleteEmployee/{CurrentID}")]
+#nullable restore
+#line 3 "C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\Pages\MedicComponents\DeleteMedic.razor"
+using BlazorCRUD.Data.Classes;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\Pages\MedicComponents\DeleteMedic.razor"
+using BlazorCRUD.Data.Repositories;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/delete-medic/{CurrentID}")]
     public partial class DeleteMedic : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -91,32 +105,31 @@ using BlazorCRUD.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 47 "C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\Pages\MedicComponents\DeleteMedic.razor"
-       
-    [Parameter]
-    public string CurrentID { get; set; }
-    Medic objEmp = new Medic();
+#line 33 "C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\Pages\MedicComponents\DeleteMedic.razor"
+        [Parameter]
+            public string CurrentID { get; set; }
+            Medic objMedic = new Medic();
 
-    protected override async Task OnInitializedAsync()
-    {
-        objEmp = await Task.Run(() => objEmpService.GetEmployeeById(Convert.ToInt32(CurrentID)));
-    }
+            protected override async Task OnInitializedAsync()
+            {
+                objMedic = await Task.Run(() => medicRepository.GetMedicById(Convert.ToInt32(CurrentID)));
+            }
 
-    protected void DeleteEmpInfo()
-    {
-        objEmpService.DeleteEmpInfo(objEmp);
-        NavigationManager.NavigateTo("Employee");
-    }
-    void Cancel()
-    {
-        NavigationManager.NavigateTo("Employee");
-    }
+            protected void DeleteMedicInfo()
+            {
+                medicRepository.DeleteMedic(objMedic);
+                NavigationManager.NavigateTo("MedicList");
+            }
+            void Cancel()
+            {
+                NavigationManager.NavigateTo("MedicList");
+            } 
 
 #line default
 #line hidden
 #nullable disable
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private EmployeeService objEmpService { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private MedicRepository medicRepository { get; set; }
     }
 }
 #pragma warning restore 1591

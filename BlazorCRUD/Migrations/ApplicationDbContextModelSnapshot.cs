@@ -18,35 +18,28 @@ namespace BlazorCRUD.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("BlazorCRUD.Data.EmployeeInfo", b =>
+            modelBuilder.Entity("BlazorCRUD.Data.Medic", b =>
                 {
-                    b.Property<int>("EmployeeId")
+                    b.Property<int>("MedicId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("City")
+                    b.Property<string>("FirstName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Country")
+                    b.Property<string>("LastName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Gender")
+                    b.Property<string>("Specialty")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.HasKey("MedicId");
 
-                    b.Property<int>("Salary")
-                        .HasColumnType("int");
-
-                    b.HasKey("EmployeeId");
-
-                    b.ToTable("Employees");
+                    b.ToTable("Medics");
                 });
 #pragma warning restore 612, 618
         }

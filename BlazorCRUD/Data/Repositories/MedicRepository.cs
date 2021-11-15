@@ -13,35 +13,34 @@ namespace BlazorCRUD.Data
             _db = db;
         }
 
-        public List<Medic> GetEmployee()
+        public List<Medic> GetMedics()
         {
-            var empList = _db.Medics.ToList();
-            return empList;
+            var medicList = _db.Medics.ToList();
+            return medicList;
         }
 
-        public string Create(Medic objEmployee)
+        public string CreateMedic(Medic objMedic)
         {
-            _db.Medics.Add(objEmployee);
+            _db.Medics.Add(objMedic);
             _db.SaveChanges();
             return "Save Successfully";
         }
 
-        public Medic GetEmployeeById(int id)
+        public Medic GetMedicById(int id)
         {
-            Medic employee = _db.Medics.FirstOrDefault(s => s.MedicId == id);
-            return employee;
+            return _db.Medics.FirstOrDefault(s => s.MedicId == id);
         }
 
-        public string UpdateEmployee(Medic objEmployee)
+        public string UpdateMedic(Medic objMedic)
         {
-            _db.Medics.Update(objEmployee);
+            _db.Medics.Update(objMedic);
             _db.SaveChanges();
             return "Update Successfully";
         }
 
-        public string DeleteEmpInfo(Medic objEmployee)
+        public string DeleteMedic(Medic objMedic)
         {
-            _db.Remove(objEmployee);
+            _db.Remove(objMedic);
             _db.SaveChanges();
             return "Delete Successfully";
         }

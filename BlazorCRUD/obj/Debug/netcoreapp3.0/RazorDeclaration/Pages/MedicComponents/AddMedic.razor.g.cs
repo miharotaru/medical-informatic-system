@@ -82,7 +82,21 @@ using BlazorCRUD.Data;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/AddEmployee")]
+#nullable restore
+#line 3 "C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\Pages\MedicComponents\AddMedic.razor"
+using BlazorCRUD.Data.Classes;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\Pages\MedicComponents\AddMedic.razor"
+using BlazorCRUD.Data.Repositories;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/add-medic")]
     public partial class AddMedic : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -91,25 +105,24 @@ using BlazorCRUD.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 47 "C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\Pages\MedicComponents\AddMedic.razor"
-       
-    Medic objEmp = new Medic();
+#line 42 "C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\Pages\MedicComponents\AddMedic.razor"
+        Medic objMedic = new Medic();
 
-    protected void CreateEmployee()
-    {
-        objEmpService.Create(objEmp);
-        NavigationManager.NavigateTo("Employee");
-    }
-    void Cancel()
-    {
-        NavigationManager.NavigateTo("Employee");
-    }
+            protected void CreateMedic()
+            {
+                medicRepository.CreateMedic(objMedic);
+                NavigationManager.NavigateTo("MedicList");
+            }
+            void Cancel()
+            {
+                NavigationManager.NavigateTo("MedicList");
+            } 
 
 #line default
 #line hidden
 #nullable disable
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private EmployeeService objEmpService { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private MedicRepository medicRepository { get; set; }
     }
 }
 #pragma warning restore 1591
