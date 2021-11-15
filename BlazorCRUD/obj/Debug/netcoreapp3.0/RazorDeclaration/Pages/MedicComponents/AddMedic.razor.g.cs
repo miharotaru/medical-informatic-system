@@ -91,12 +91,12 @@ using BlazorCRUD.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 47 "C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\Pages\MedicComponents\AddMedic.razor"
+#line 40 "C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\Pages\MedicComponents\AddMedic.razor"
         Medic objMedic = new Medic();
 
             protected void CreateMedic()
             {
-                objEmpService.Create(objMedic);
+                medicRepository.Create(objMedic);
                 NavigationManager.NavigateTo("Medic");
             }
             void Cancel()

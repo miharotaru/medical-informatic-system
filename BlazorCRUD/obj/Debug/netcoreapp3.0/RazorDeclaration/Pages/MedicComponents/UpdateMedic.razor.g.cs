@@ -76,14 +76,14 @@ using BlazorCRUD.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\Pages\MedicComponents\DeleteMedic.razor"
+#line 2 "C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\Pages\MedicComponents\UpdateMedic.razor"
 using BlazorCRUD.Data;
 
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/delete-medic/{CurrentID}")]
-    public partial class DeleteMedic : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/update-medic/{CurrentID}")]
+    public partial class UpdateMedic : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -91,20 +91,20 @@ using BlazorCRUD.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 31 "C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\Pages\MedicComponents\DeleteMedic.razor"
+#line 43 "C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\Pages\MedicComponents\UpdateMedic.razor"
        
     [Parameter]
     public string CurrentID { get; set; }
-    Medic objMedic = new Medic();
+    Medic objMed = new Medic();
 
     protected override async Task OnInitializedAsync()
     {
-        objMedic = await Task.Run(() => medicRepository.GetEmployeeById(Convert.ToInt32(CurrentID)));
+        objMed = await Task.Run(()=>medicRepository.GetMedicById(Convert.ToInt32(CurrentID)));
     }
 
-    protected void DeleteMedicInfo()
+    protected void UpdateMedicInfo()
     {
-        medicRepository.DeleteEmpInfo(objMedic);
+        medicRepository.UpdateMedic(objMed);
         NavigationManager.NavigateTo("Medic");
     }
     void Cancel()

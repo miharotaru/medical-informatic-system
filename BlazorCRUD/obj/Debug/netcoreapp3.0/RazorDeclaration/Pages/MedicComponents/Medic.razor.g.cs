@@ -82,7 +82,7 @@ using BlazorCRUD.Data;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/employee")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/medic")]
     public partial class Medic : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -91,12 +91,13 @@ using BlazorCRUD.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 49 "C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\Pages\MedicComponents\Medic.razor"
-        List<Medic> objEmp;
+#line 47 "C:\Users\HP\Desktop\Medical-System-Blazor\BlazorCRUD\Pages\MedicComponents\Medic.razor"
+        List<Medic> objMed;
             protected override async Task OnInitializedAsync()
             {
-                objEmp = await Task.Run(() => objEmpService.GetEmployee());
-            } 
+                objMed = await Task.Run(() => medicRepository.GetEmployee());
+            }
+      
 
 #line default
 #line hidden
