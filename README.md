@@ -1,4 +1,4 @@
-# Medical Informatics System
+# Medical Informatic System
 This is a starter project for creating a Blazor Server SPA with Entity Framework Code First
 
 ![medical-system](https://user-images.githubusercontent.com/22495045/141843025-54f85b4b-7454-4253-af52-8521be79028f.png)
