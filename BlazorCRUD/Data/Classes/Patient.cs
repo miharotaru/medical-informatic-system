@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace BlazorCRUD.Data
 {
-    public class Medic
+    public class Patient
     {
         [Key]
-        public int MedicId { get; set; }
+        public int PatientId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string Specialty { get; set; }
-        public float RatePerHour { get; set; } 
+        public string Symptoms { get; set; }
+        public string ScreeningNotes { get; set; }
     }
 }

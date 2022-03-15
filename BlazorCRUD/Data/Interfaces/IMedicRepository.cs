@@ -8,12 +8,12 @@ namespace BlazorCRUD.Data
     public interface IMedicRepository
     {
         public List<Medic> GetMedics();
-        public string CreateMedic(Medic objEmployee);
+        public bool CreateMedic(Medic objEmployee);
 
         public Medic GetMedicById(int id);
 
-        public string UpdateMedic(Medic objEmployee);
+        public bool UpdateMedic(Medic objEmployee);
 
-        public string DeleteMedic(Medic objEmployee);
+        public bool DeleteMedic(Medic objEmployee);
     }
 }

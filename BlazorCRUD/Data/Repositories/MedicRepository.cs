@@ -19,11 +19,11 @@ namespace BlazorCRUD.Data
             return medicList;
         }
 
-        public string CreateMedic(Medic objMedic)
+        public bool CreateMedic(Medic objMedic)
         {
             _db.Medics.Add(objMedic);
             _db.SaveChanges();
-            return "Save Successfully";
+            return true;
         }
 
         public Medic GetMedicById(int id)
@@ -31,18 +31,18 @@ namespace BlazorCRUD.Data
             return _db.Medics.FirstOrDefault(s => s.MedicId == id);
         }
 
-        public string UpdateMedic(Medic objMedic)
+        public bool UpdateMedic(Medic objMedic)
         {
             _db.Medics.Update(objMedic);
             _db.SaveChanges();
-            return "Update Successfully";
+            return true;
         }
 
-        public string DeleteMedic(Medic objMedic)
+        public bool DeleteMedic(Medic objMedic)
         {
             _db.Remove(objMedic);
             _db.SaveChanges();
-            return "Delete Successfully";
+            return true;
         }
     }
 }
