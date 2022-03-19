@@ -82,7 +82,7 @@ using BlazorCRUD.Data;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/medic")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/appointment")]
     public partial class AppointmentList : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -92,16 +92,16 @@ using BlazorCRUD.Data;
         #pragma warning restore 1998
 #nullable restore
 #line 46 "C:\Users\Catalin\Desktop\medical-informatic-system\BlazorCRUD\Pages\AppointmentComponents\AppointmentList.razor"
-        List<Medic> objMedics;
+        List<Appointment> objAppointments;
     protected override async Task OnInitializedAsync()
     {
-        objMedics = await Task.Run(() => medicRepository.GetMedics());
+        objAppointments = await Task.Run(() => appointmentRepository.GetAppointments());
     }
 
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private MedicRepository medicRepository { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private AppointmentRepository appointmentRepository { get; set; }
     }
 }
 #pragma warning restore 1591

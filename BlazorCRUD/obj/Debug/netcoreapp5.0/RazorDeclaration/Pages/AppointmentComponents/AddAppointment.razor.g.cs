@@ -82,7 +82,7 @@ using BlazorCRUD.Data;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/add-medic")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/add-appointment")]
     public partial class AddAppointment : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -91,24 +91,24 @@ using BlazorCRUD.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 40 "C:\Users\Catalin\Desktop\medical-informatic-system\BlazorCRUD\Pages\AppointmentComponents\AddAppointment.razor"
-        Medic objMedic = new Medic();
+#line 38 "C:\Users\Catalin\Desktop\medical-informatic-system\BlazorCRUD\Pages\AppointmentComponents\AddAppointment.razor"
+        Appointment objAppointment = new Appointment();
 
-            protected void CreateMedic()
+            protected void CreateAppointment()
             {
-                medicRepository.CreateMedic(objMedic);
-                NavigationManager.NavigateTo("medic");
+                appointmentRepository.CreateAppointment(objAppointment);
+                NavigationManager.NavigateTo("appointment");
             }
             void Cancel()
             {
-                NavigationManager.NavigateTo("medic");
+                NavigationManager.NavigateTo("appointment");
             } 
 
 #line default
 #line hidden
 #nullable disable
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private MedicRepository medicRepository { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private AppointmentRepository appointmentRepository { get; set; }
     }
 }
 #pragma warning restore 1591
