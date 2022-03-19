@@ -82,7 +82,7 @@ using BlazorCRUD.Data;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/delete-medic/{CurrentID}")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/delete-appointment/{CurrentID}")]
     public partial class DeleteAppointment : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -91,31 +91,31 @@ using BlazorCRUD.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 31 "C:\Users\Catalin\Desktop\medical-informatic-system\BlazorCRUD\Pages\AppointmentComponents\DeleteAppointment.razor"
+#line 27 "C:\Users\Catalin\Desktop\medical-informatic-system\BlazorCRUD\Pages\AppointmentComponents\DeleteAppointment.razor"
         [Parameter]
             public string CurrentID { get; set; }
-            Medic objMedic = new Medic();
+            Appointment objAppointment = new Appointment();
 
             protected override async Task OnInitializedAsync()
             {
-                objMedic = await Task.Run(() => medicRepository.GetMedicById(Convert.ToInt32(CurrentID)));
+                objAppointment = await Task.Run(() => appointmentRepository.GetAppointmentById(Convert.ToInt32(CurrentID)));
             }
 
-            protected void DeleteMedicInfo()
+            protected void DeleteAppointmentInfo()
             {
-                medicRepository.DeleteMedic(objMedic);
-                NavigationManager.NavigateTo("medic");
+                appointmentRepository.DeleteAppointment(objAppointment);
+                NavigationManager.NavigateTo("appointment");
             }
             void Cancel()
             {
-                NavigationManager.NavigateTo("medic");
+                NavigationManager.NavigateTo("appointment");
             } 
 
 #line default
 #line hidden
 #nullable disable
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private MedicRepository medicRepository { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private AppointmentRepository appointmentRepository { get; set; }
     }
 }
 #pragma warning restore 1591

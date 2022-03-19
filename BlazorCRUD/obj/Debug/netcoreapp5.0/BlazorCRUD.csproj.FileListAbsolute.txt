@@ -151,8 +151,6 @@ C:\Users\Catalin\Desktop\medical-informatic-system\BlazorCRUD\obj\Debug\netcorea
 C:\Users\Catalin\Desktop\medical-informatic-system\BlazorCRUD\obj\Debug\netcoreapp5.0\RazorDeclaration\Pages\AppointmentComponents\AddAppointment.razor.g.cs
 C:\Users\Catalin\Desktop\medical-informatic-system\BlazorCRUD\obj\Debug\netcoreapp5.0\RazorDeclaration\Pages\AppointmentComponents\AppointmentList.razor.g.cs
 C:\Users\Catalin\Desktop\medical-informatic-system\BlazorCRUD\obj\Debug\netcoreapp5.0\RazorDeclaration\Pages\AppointmentComponents\DeleteAppointment.razor.g.cs
-C:\Users\Catalin\Desktop\medical-informatic-system\BlazorCRUD\obj\Debug\netcoreapp5.0\RazorDeclaration\Pages\AppointmentComponents\UpdateAppointment.razor.g.cs
 C:\Users\Catalin\Desktop\medical-informatic-system\BlazorCRUD\obj\Debug\netcoreapp5.0\Razor\Pages\AppointmentComponents\AddAppointment.razor.g.cs
 C:\Users\Catalin\Desktop\medical-informatic-system\BlazorCRUD\obj\Debug\netcoreapp5.0\Razor\Pages\AppointmentComponents\AppointmentList.razor.g.cs
 C:\Users\Catalin\Desktop\medical-informatic-system\BlazorCRUD\obj\Debug\netcoreapp5.0\Razor\Pages\AppointmentComponents\DeleteAppointment.razor.g.cs
-C:\Users\Catalin\Desktop\medical-informatic-system\BlazorCRUD\obj\Debug\netcoreapp5.0\Razor\Pages\AppointmentComponents\UpdateAppointment.razor.g.cs

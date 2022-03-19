@@ -30,6 +30,7 @@ namespace BlazorCRUD
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddScoped<MedicRepository>();
+            services.AddScoped<AppointmentRepository>();
             services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }

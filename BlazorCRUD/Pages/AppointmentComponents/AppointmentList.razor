@@ -31,9 +31,6 @@ else
                 <td>@appointment.Patient</td>
                 <td>@appointment.Date</td>
                 <td>
-                    <a class="nav-link" href="update-appointment/@appointment.AppointmentId">
-                        <span class="oi oi-pencil" aria-hidden="true"></span>Edit
-                    </a>
                     <a class="nav-link" href="delete-appointment/@appointment.AppointmentId">
                         <span class="oi oi-trash" aria-hidden="true"></span>Delete
                     </a>
@@ -44,6 +41,7 @@ else
     </table>}
 
 @code { List<Appointment> objAppointments;
+
     protected override async Task OnInitializedAsync()
     {
         objAppointments = await Task.Run(() => appointmentRepository.GetAppointments());

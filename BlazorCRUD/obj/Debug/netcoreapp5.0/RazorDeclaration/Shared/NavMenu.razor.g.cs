@@ -83,7 +83,7 @@ using BlazorCRUD.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 18 "C:\Users\Catalin\Desktop\medical-informatic-system\BlazorCRUD\Shared\NavMenu.razor"
+#line 21 "C:\Users\Catalin\Desktop\medical-informatic-system\BlazorCRUD\Shared\NavMenu.razor"
        
     bool collapseNavMenu = true;
 

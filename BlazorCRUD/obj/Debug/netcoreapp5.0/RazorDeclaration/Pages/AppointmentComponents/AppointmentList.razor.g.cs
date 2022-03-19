@@ -91,8 +91,9 @@ using BlazorCRUD.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 46 "C:\Users\Catalin\Desktop\medical-informatic-system\BlazorCRUD\Pages\AppointmentComponents\AppointmentList.razor"
+#line 43 "C:\Users\Catalin\Desktop\medical-informatic-system\BlazorCRUD\Pages\AppointmentComponents\AppointmentList.razor"
         List<Appointment> objAppointments;
+
     protected override async Task OnInitializedAsync()
     {
         objAppointments = await Task.Run(() => appointmentRepository.GetAppointments());
