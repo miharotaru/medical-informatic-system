@@ -1,0 +1,49 @@
+﻿@page "/appointment"
+@using MedicalSystems.Data
+@inject AppointmentRepository appointmentRepository
+
+<NavLink class="nav-link" href="add-appointment">
+    <button class="btn btn-success">Add Appointment</button>
+</NavLink>
+
+<h1>Appointments Information</h1>
+@if (objAppointments == null)
+{
+    <p><em>Loading....</em></p> }
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Appointment Id</th>
+                <th>Medic Id</th>
+                <th>Patient Id</th>
+                <th>Appointment Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var appointment in objAppointments)
+            {
+            <tr>
+                <td>@appointment.AppointmentId</td>
+                <td>@appointment.Medic</td>
+                <td>@appointment.Patient</td>
+                <td>@appointment.Date</td>
+                <td>
+                    <a class="nav-link" href="delete-appointment/@appointment.AppointmentId">
+                        <span class="oi oi-trash" aria-hidden="true"></span>Delete
+                    </a>
+                </td>
+            </tr>
+}
+        </tbody>
+    </table>}
+
+@code { List<Appointment> objAppointments;
+
+    protected override async Task OnInitializedAsync()
+    {
+        objAppointments = await Task.Run(() => appointmentRepository.GetAppointments());
+    }
+}
