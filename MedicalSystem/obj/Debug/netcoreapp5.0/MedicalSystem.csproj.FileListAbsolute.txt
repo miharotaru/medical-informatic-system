@@ -77,3 +77,4 @@ C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\
 C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\obj\Debug\netcoreapp5.0\MedicalSystem.Views.pdb
 C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\obj\Debug\netcoreapp5.0\MedicalSystem.csproj.CopyComplete
 C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\obj\Debug\netcoreapp5.0\MedicalSystem.genruntimeconfig.cache
+C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\obj\Debug\netcoreapp5.0\MedicalSystem.csproj.AssemblyReference.cache
