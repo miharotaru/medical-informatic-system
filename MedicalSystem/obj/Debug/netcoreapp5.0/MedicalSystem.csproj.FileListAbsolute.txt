@@ -78,3 +78,7 @@ C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\
 C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\obj\Debug\netcoreapp5.0\MedicalSystem.csproj.CopyComplete
 C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\obj\Debug\netcoreapp5.0\MedicalSystem.genruntimeconfig.cache
 C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\obj\Debug\netcoreapp5.0\MedicalSystem.csproj.AssemblyReference.cache
+C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\bin\Debug\netcoreapp5.0\MedicalSystem.StaticWebAssets.xml
+C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\bin\Debug\netcoreapp5.0\Radzen.Blazor.dll
+C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\bin\Debug\netcoreapp5.0\System.Linq.Dynamic.Core.dll
+C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\obj\Debug\netcoreapp5.0\staticwebassets\MedicalSystem.StaticWebAssets.xml
