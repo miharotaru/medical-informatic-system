@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mA3A7qw8fmabVnAN4BH8ycRCQ724Exz4LellpWhhvjqjhogYQU9bzxncRIGTvYeCYbX/ijd5ByiJ/UOm13ZBXA==",
+  "dgSpecHash": "pwLxhDGDJJeuojnE/OCdulQK2rSewZnljVhDo0Eftc1GdkkLGvrJb7s5BNLBPgxtntVlAflYu0KN6emu9TRmzA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Catalin\\Desktop\\medical-informatic-system\\BlazorCRUD\\BlazorCRUD.csproj",
+  "projectFilePath": "C:\\Users\\Catalin\\Desktop\\Medical System\\medical-informatic-system\\BlazorCRUD\\BlazorCRUD.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Catalin\\.nuget\\packages\\microsoft.csharp\\4.6.0\\microsoft.csharp.4.6.0.nupkg.sha512",
     "C:\\Users\\Catalin\\.nuget\\packages\\microsoft.data.sqlclient\\1.0.19249.1\\microsoft.data.sqlclient.1.0.19249.1.nupkg.sha512",

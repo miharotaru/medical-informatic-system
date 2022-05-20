@@ -8,8 +8,9 @@ namespace BlazorCRUD.Data
 {
     public class Prescription
     {
+        [Key]
         public int PrescriptionId { get; set; }
-        public string DrugName { get; set; }
+        public string DrugNames { get; set; }
         public bool IsCompensated { get; set; }
     }
 }

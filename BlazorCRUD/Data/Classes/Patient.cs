@@ -10,8 +10,7 @@ namespace BlazorCRUD.Data
     {
         [Key]
         public int PatientId { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string Name { get; set; }
         public string Symptoms { get; set; }
         public string ScreeningNotes { get; set; }
     }

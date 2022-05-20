@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Catalin\\Desktop\\medical-informatic-system\\BlazorCRUD\\BlazorCRUD.csproj": {}
+    "C:\\Users\\Catalin\\Desktop\\Medical System\\medical-informatic-system\\BlazorCRUD\\BlazorCRUD.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Catalin\\Desktop\\medical-informatic-system\\BlazorCRUD\\BlazorCRUD.csproj": {
+    "C:\\Users\\Catalin\\Desktop\\Medical System\\medical-informatic-system\\BlazorCRUD\\BlazorCRUD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Catalin\\Desktop\\medical-informatic-system\\BlazorCRUD\\BlazorCRUD.csproj",
+        "projectUniqueName": "C:\\Users\\Catalin\\Desktop\\Medical System\\medical-informatic-system\\BlazorCRUD\\BlazorCRUD.csproj",
         "projectName": "BlazorCRUD",
-        "projectPath": "C:\\Users\\Catalin\\Desktop\\medical-informatic-system\\BlazorCRUD\\BlazorCRUD.csproj",
+        "projectPath": "C:\\Users\\Catalin\\Desktop\\Medical System\\medical-informatic-system\\BlazorCRUD\\BlazorCRUD.csproj",
         "packagesPath": "C:\\Users\\Catalin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Catalin\\Desktop\\medical-informatic-system\\BlazorCRUD\\obj\\",
+        "outputPath": "C:\\Users\\Catalin\\Desktop\\Medical System\\medical-informatic-system\\BlazorCRUD\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Catalin\\AppData\\Roaming\\NuGet\\NuGet.Config",
