@@ -1,0 +1,49 @@
+﻿@page "/prescription"
+@using MedicalSystems.Data
+@inject PrescriptionRepository prescriptionRepository
+
+<NavLink class="nav-link" href="add-prescription">
+    <button class="btn btn-success">Add Prescription</button>
+</NavLink>
+
+<h1>Prescriptions</h1>
+@if (objPrescription == null)
+{
+    <p><em>Loading....</em></p> }
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Prescription Id</th>
+                <th>Drug Names</th>
+                <th>Is Compensated</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var prescription in objPrescription)
+            {
+            <tr>
+                <td>@prescription.PrescriptionId</td>
+                <td>@prescription.DrugNames</td>
+                <td>@prescription.IsCompensated</td>
+                <td>
+                    <a class="nav-link" href="update-prescription/@prescription.PrescriptionId">
+                        <span class="oi oi-pencil" aria-hidden="true"></span>Edit
+                    </a>
+                    <a class="nav-link" href="delete-prescription/@prescription.PrescriptionId">
+                        <span class="oi oi-trash" aria-hidden="true"></span>Delete
+                    </a>
+                </td>
+            </tr>
+}
+        </tbody>
+    </table>}
+
+@code { List<Prescription> objPrescription;
+    protected override async Task OnInitializedAsync()
+    {
+        objPrescription = await Task.Run(() => prescriptionRepository.GetPrescriptions());
+    }
+}

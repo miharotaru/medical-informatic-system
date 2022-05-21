@@ -90,3 +90,11 @@ C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\
 C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\obj\Debug\netcoreapp5.0\Razor\Pages\PatientComponents\DeletePatient.razor.g.cs
 C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\obj\Debug\netcoreapp5.0\Razor\Pages\PatientComponents\PatientList.razor.g.cs
 C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\obj\Debug\netcoreapp5.0\Razor\Pages\PatientComponents\UpdatePatient.razor.g.cs
+C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\obj\Debug\netcoreapp5.0\RazorDeclaration\Pages\PrescriptionComponents\AddPrescription.razor.g.cs
+C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\obj\Debug\netcoreapp5.0\RazorDeclaration\Pages\PrescriptionComponents\DeletePrescription.razor.g.cs
+C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\obj\Debug\netcoreapp5.0\RazorDeclaration\Pages\PrescriptionComponents\PrescriptionList.razor.g.cs
+C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\obj\Debug\netcoreapp5.0\RazorDeclaration\Pages\PrescriptionComponents\UpdatePrescription.razor.g.cs
+C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\obj\Debug\netcoreapp5.0\Razor\Pages\PrescriptionComponents\AddPrescription.razor.g.cs
+C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\obj\Debug\netcoreapp5.0\Razor\Pages\PrescriptionComponents\DeletePrescription.razor.g.cs
+C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\obj\Debug\netcoreapp5.0\Razor\Pages\PrescriptionComponents\PrescriptionList.razor.g.cs
+C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\obj\Debug\netcoreapp5.0\Razor\Pages\PrescriptionComponents\UpdatePrescription.razor.g.cs

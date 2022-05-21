@@ -7,7 +7,7 @@ namespace MedicalSystems.Data
         [Key]
         public int MedicId { get; set; }
         public string Name { get; set; }
-        public string Specialty { get; set; }
+        public string Specialty { get; set; } = "General";
         public float RatePerHour { get; set; } 
     }
 }

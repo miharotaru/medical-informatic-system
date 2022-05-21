@@ -5,6 +5,8 @@
 
 <h2>Add Appointment</h2>
 <hr />
+<p>@message</p>
+
 <form>
     <div class="row">
         <div class="col-md-8">
@@ -35,14 +37,19 @@
     </div>
 </form>
 
-@code { Appointment objAppointment = new Appointment();
+@code {
+    Appointment objAppointment = new Appointment();
+    string message = "Here you can add an appointment";
+    protected void CreateAppointment()
+    {
 
-            protected void CreateAppointment()
+        var result = appointmentRepository.CreateAppointment(objAppointment);
+        if (result == true)
+            NavigationManager.NavigateTo("appointment");
+        else message = "Either the medic or the patient data is not correct";
+    }
+    void Cancel()
             {
-                appointmentRepository.CreateAppointment(objAppointment);
                 NavigationManager.NavigateTo("appointment");
-            }
-            void Cancel()
-            {
-                NavigationManager.NavigateTo("appointment");
-            } }
+            } 
+}

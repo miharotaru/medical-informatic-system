@@ -26,6 +26,7 @@ namespace MedicalSystems
             services.AddScoped<MedicRepository>();
             services.AddScoped<PatientRepository>();
             services.AddScoped<AppointmentRepository>();
+            services.AddScoped<PrescriptionRepository>();
             services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }

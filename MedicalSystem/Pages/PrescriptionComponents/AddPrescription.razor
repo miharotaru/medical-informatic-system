@@ -1,0 +1,46 @@
+﻿@page "/add-prescription"
+@using MedicalSystems.Data
+@inject PrescriptionRepository prescriptionRepository
+@inject NavigationManager NavigationManager
+
+<h2>Add Prescription</h2>
+<p>@message</p>
+<hr />
+<form>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="DrugNames" class="control-label">Drug List</label>
+                <input form="DrugNames" class="form-control" @bind="@objPrescription.DrugNames" />
+            </div>
+            <div class="form-group">
+                <label for="IsCompensated" class="control-label">Is Compensated</label>
+                 <select class="form-control" @bind="@objPrescription.IsCompensated">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="button" class="btn btn-primary" @onclick="@CreatePrescription" value="Save" />
+                <input type="button" class="btn btn-primary" @onclick="@Cancel" value="Cancel" />
+            </div>
+        </div>
+    </div>
+</form>
+
+@code { Prescription objPrescription = new Prescription();
+        string message = "Here you can manage prescriptions";
+
+            protected void CreatePrescription()
+            {
+                prescriptionRepository.CreatePrescription(objPrescription);
+                NavigationManager.NavigateTo("prescription");
+            }
+            void Cancel()
+            {
+                NavigationManager.NavigateTo("prescription");
+            } }

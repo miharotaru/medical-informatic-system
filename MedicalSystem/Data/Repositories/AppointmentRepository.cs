@@ -20,9 +20,28 @@ namespace MedicalSystems.Data
 
         public bool CreateAppointment(Appointment appointment)
         {
-            _db.Appointments.Add(appointment);
-            _db.SaveChanges();
-            return true;
+            var validationResult = ValidateAppointment(appointment.Medic, appointment.Patient);
+
+            if(validationResult == true)
+            {
+                _db.Appointments.Add(appointment);
+                _db.SaveChanges();
+                return true;
+            }
+
+            return false;
+        }
+
+        public bool ValidateAppointment(string MedicName, string PatientName)
+        {
+            var doesMedicExist = _db.Medics.Where(m => m.Name == MedicName).FirstOrDefault();
+            var doesPatientExist = _db.Patients.Where(p => p.Name == PatientName).FirstOrDefault();
+
+            if(doesMedicExist != null && doesPatientExist !=null)
+            {
+                return true;
+            }
+            else return false;
         }
 
         public Appointment GetAppointmentById(int id)

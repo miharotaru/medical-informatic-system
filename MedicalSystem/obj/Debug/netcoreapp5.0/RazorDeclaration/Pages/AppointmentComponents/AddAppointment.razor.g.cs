@@ -91,15 +91,19 @@ using MedicalSystems.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 38 "C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\Pages\AppointmentComponents\AddAppointment.razor"
-        Appointment objAppointment = new Appointment();
+#line 40 "C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\Pages\AppointmentComponents\AddAppointment.razor"
+       
+    Appointment objAppointment = new Appointment();
+    string message = "Here you can add an appointment";
+    protected void CreateAppointment()
+    {
 
-            protected void CreateAppointment()
-            {
-                appointmentRepository.CreateAppointment(objAppointment);
-                NavigationManager.NavigateTo("appointment");
-            }
-            void Cancel()
+        var result = appointmentRepository.CreateAppointment(objAppointment);
+        if (result == true)
+            NavigationManager.NavigateTo("appointment");
+        else message = "Either the medic or the patient data is not correct";
+    }
+    void Cancel()
             {
                 NavigationManager.NavigateTo("appointment");
             } 
