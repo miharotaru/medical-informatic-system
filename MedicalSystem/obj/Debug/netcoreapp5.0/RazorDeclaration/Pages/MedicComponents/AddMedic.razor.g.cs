@@ -91,7 +91,7 @@ using MedicalSystems.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 36 "C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\Pages\MedicComponents\AddMedic.razor"
+#line 40 "C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\Pages\MedicComponents\AddMedic.razor"
         Medic objMedic = new Medic();
 
             protected void CreateMedic()

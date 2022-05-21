@@ -9,8 +9,8 @@
     <div class="row">
         <div class="col-md-8">
             <div class="form-group">
-                <label for="FirstName" class="control-label">First Name</label>
-                <input form="FirstName" class="form-control" @bind="@objMedic.Name" />
+                <label for="Name" class="control-label">Name</label>
+                <input form="Name" class="form-control" @bind="@objMedic.Name" />
             </div>
             <div class="form-group">
                 <label for="Specialty" class="control-label">Specialty</label>
@@ -20,6 +20,10 @@
                     <option value="Hematology">Hematology</option>
                     <option value="Psychology">Psychology</option>
                 </select>
+            </div>
+            <div class="form-group">
+                <label for="RatePerHour" class="control-label">Rate per Hour $</label>
+                <input form="RatePerHour" class="form-control" @bind="@objMedic.RatePerHour" />
             </div>
         </div>
     </div>

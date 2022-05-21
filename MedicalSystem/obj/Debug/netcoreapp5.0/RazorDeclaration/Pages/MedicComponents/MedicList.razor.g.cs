@@ -91,7 +91,7 @@ using MedicalSystems.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 44 "C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\Pages\MedicComponents\MedicList.razor"
+#line 46 "C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\Pages\MedicComponents\MedicList.razor"
         List<Medic> objMedics;
     protected override async Task OnInitializedAsync()
     {
