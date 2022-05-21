@@ -82,3 +82,11 @@ C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\
 C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\bin\Debug\netcoreapp5.0\Radzen.Blazor.dll
 C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\bin\Debug\netcoreapp5.0\System.Linq.Dynamic.Core.dll
 C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\obj\Debug\netcoreapp5.0\staticwebassets\MedicalSystem.StaticWebAssets.xml
+C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\obj\Debug\netcoreapp5.0\RazorDeclaration\Pages\PatientComponents\AddPatient.razor.g.cs
+C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\obj\Debug\netcoreapp5.0\RazorDeclaration\Pages\PatientComponents\DeletePatient.razor.g.cs
+C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\obj\Debug\netcoreapp5.0\RazorDeclaration\Pages\PatientComponents\PatientList.razor.g.cs
+C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\obj\Debug\netcoreapp5.0\RazorDeclaration\Pages\PatientComponents\UpdatePatient.razor.g.cs
+C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\obj\Debug\netcoreapp5.0\Razor\Pages\PatientComponents\AddPatient.razor.g.cs
+C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\obj\Debug\netcoreapp5.0\Razor\Pages\PatientComponents\DeletePatient.razor.g.cs
+C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\obj\Debug\netcoreapp5.0\Razor\Pages\PatientComponents\PatientList.razor.g.cs
+C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\obj\Debug\netcoreapp5.0\Razor\Pages\PatientComponents\UpdatePatient.razor.g.cs

@@ -1,0 +1,53 @@
+﻿@page "/patient"
+@using MedicalSystems.Data
+@inject PatientRepository patientRepository
+
+<NavLink class="nav-link" href="add-patient">
+    <button class="btn btn-success">Add Patient</button>
+</NavLink>
+
+<h1>Patients</h1>
+@if (objPatients == null)
+{
+    <p><em>Loading....</em></p> }
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Patient Id</th>
+                <th>Name</th>
+                <th>Symptoms</th>
+                <th>Screening Notes</th>
+                <th>Email</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var patient in objPatients)
+            {
+            <tr>
+                <td>@patient.PatientId</td>
+                <td>@patient.Name</td>
+                <td>@patient.Symptoms</td>
+                <td>@patient.ScreeningNotes</td>
+                <td>@patient.Email</td>
+                <td>
+                    <a class="nav-link" href="update-patient/@patient.PatientId">
+                        <span class="oi oi-pencil" aria-hidden="true"></span>Edit
+                    </a>
+                    <a class="nav-link" href="delete-patient/@patient.PatientId">
+                        <span class="oi oi-trash" aria-hidden="true"></span>Delete
+                    </a>
+                </td>
+            </tr>
+}
+        </tbody>
+    </table>}
+
+@code { List<Patient> objPatients;
+    protected override async Task OnInitializedAsync()
+    {
+        objPatients = await Task.Run(() => patientRepository.GetPatients());
+    }
+}

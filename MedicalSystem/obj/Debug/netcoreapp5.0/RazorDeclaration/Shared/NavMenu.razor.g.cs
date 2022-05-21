@@ -83,7 +83,7 @@ using MedicalSystem.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 21 "C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\Shared\NavMenu.razor"
+#line 28 "C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\Shared\NavMenu.razor"
        
     bool collapseNavMenu = true;
 

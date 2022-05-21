@@ -24,6 +24,7 @@ namespace MedicalSystems
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddScoped<MedicRepository>();
+            services.AddScoped<PatientRepository>();
             services.AddScoped<AppointmentRepository>();
             services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));

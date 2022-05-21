@@ -1,0 +1,49 @@
+﻿@page "/add-patient"
+@using MedicalSystems.Data
+@inject PatientRepository patientRepository
+@inject NavigationManager NavigationManager
+
+<h2>Add Patient</h2>
+<hr />
+<form>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="Name" class="control-label">Name</label>
+                <input form="Name" class="form-control" @bind="@objPatient.Name" />
+            </div>
+            <div class="form-group">
+                <label for="Symtoms" class="control-label">Symptoms</label>
+                <input form="Symptoms" class="form-control" @bind="@objPatient.Symptoms" />
+            </div>
+            <div class="form-group">
+                <label for="Email" class="control-label">Email</label>
+                <input form="Email" class="form-control" @bind="@objPatient.Email" />
+            </div>
+            <div class="form-group">
+                <label for="ScreeningNotes" class="control-label">Screening Notes</label>
+                <input form="ScreeningNotes" class="form-control" @bind="@objPatient.ScreeningNotes" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="button" class="btn btn-primary" @onclick="@CreatePatient" value="Save" />
+                <input type="button" class="btn btn-primary" @onclick="@Cancel" value="Cancel" />
+            </div>
+        </div>
+    </div>
+</form>
+
+@code { Patient objPatient = new Patient();
+
+            protected void CreatePatient()
+            {
+                patientRepository.CreatePatient(objPatient);
+                NavigationManager.NavigateTo("patient");
+            }
+            void Cancel()
+            {
+                NavigationManager.NavigateTo("patient");
+            } }
