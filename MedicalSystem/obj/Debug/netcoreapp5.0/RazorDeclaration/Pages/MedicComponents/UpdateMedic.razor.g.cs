@@ -91,25 +91,40 @@ using MedicalSystems.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 40 "C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\Pages\MedicComponents\UpdateMedic.razor"
-        [Parameter]
-            public string CurrentID { get; set; }
-            Medic objMedic = new Medic();
+#line 41 "C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\Pages\MedicComponents\UpdateMedic.razor"
+       
+    [Parameter]
+    public string CurrentID { get; set; }
+    Medic objMedic = new Medic();
+    string validationMessage = "";
+    Medic initialMedicValues = new Medic();
 
-            protected override async Task OnInitializedAsync()
-            {
-                objMedic = await Task.Run(() => medicRepository.GetMedicById(Convert.ToInt32(CurrentID)));
-            }
+    protected override async Task OnInitializedAsync()
+    {
+        objMedic = await Task.Run(() => medicRepository.GetMedicById(Convert.ToInt32(CurrentID)));
+        initialMedicValues.Name = objMedic.Name;
+        initialMedicValues.RatePerHour = objMedic.RatePerHour;
+    }
 
-            protected void UpdateMedicInfo()
-            {
-                medicRepository.UpdateMedic(objMedic);
-                NavigationManager.NavigateTo("medic");
-            }
-            void Cancel()
-            {
-                NavigationManager.NavigateTo("medic");
-            } 
+    protected void UpdateMedicInfo()
+    {
+        if (MedicValidations.ValidateMedic(objMedic.Name, objMedic.RatePerHour))
+        {
+            medicRepository.UpdateMedic(objMedic);
+            NavigationManager.NavigateTo("medic");
+        }
+        else
+        {
+            validationMessage = "Please verify that the rate per hour is greater than 0 and the medic name is not empty and starts with uppercase";
+            objMedic.Name = initialMedicValues.Name;
+            objMedic.RatePerHour = initialMedicValues.RatePerHour;
+        }
+    }
+
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("medic");
+    }
 
 #line default
 #line hidden

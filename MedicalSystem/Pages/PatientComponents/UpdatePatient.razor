@@ -5,6 +5,7 @@
 
 <h2>Update Patient</h2>
 <hr />
+
 <form>
     <div class="row">
         <div class="col-md-8">
@@ -37,11 +38,14 @@
         [Parameter]
         public string CurrentID { get; set; }
         Patient objPatient = new Patient();
+        Patient initialPatientValues = new Patient();
         string validationMessage = "";
 
     protected override async Task OnInitializedAsync()
     {
         objPatient = await Task.Run(() => patientRepository.GetPatientById(Convert.ToInt32(CurrentID)));
+        initialPatientValues.Email = objPatient.Email;
+        initialPatientValues.Name = objPatient.Name;
     }
 
     protected void UpdatePatientInfo()
@@ -51,7 +55,12 @@
             patientRepository.UpdatePatient(objPatient);
             NavigationManager.NavigateTo("patient");
         }
-        else validationMessage = "Please check that the name stars with an uppercase and the email is valid before updating!";
+        else
+        {
+            validationMessage = "Please check that the name stars with an uppercase and the email is valid before updating!";
+            objPatient.Email = initialPatientValues.Email;
+            objPatient.Name = initialPatientValues.Name;
+        }
     }
     
     void Cancel()

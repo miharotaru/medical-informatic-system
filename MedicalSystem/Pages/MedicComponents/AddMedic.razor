@@ -8,8 +8,9 @@
 <form>
     <div class="row">
         <div class="col-md-8">
+            <p class="text-danger">@validationMessage</p>
             <div class="form-group">
-                <label for="Name" class="control-label">Last Name</label>
+                <label for="Name" class="control-label">Name</label>
                 <input form="Name" class="form-control" @bind="@objMedic.Name" />
             </div>
             <div class="form-group">
@@ -37,14 +38,26 @@
     </div>
 </form>
 
-@code { Medic objMedic = new Medic();
+@code {
+    Medic objMedic = new Medic();
+    string validationMessage = "";
 
-            protected void CreateMedic()
-            {
-                medicRepository.CreateMedic(objMedic);
-                NavigationManager.NavigateTo("medic");
-            }
-            void Cancel()
-            {
-                NavigationManager.NavigateTo("medic");
-            } }
+    protected void CreateMedic()
+    {
+        if (MedicValidations.ValidateMedic(objMedic.Name, objMedic.RatePerHour))
+        {
+            medicRepository.CreateMedic(objMedic);
+            NavigationManager.NavigateTo("medic");
+        }
+        else
+        {
+            validationMessage = "Please verify that the rate per hour is greater than 0 and the medic name is not empty and starts with uppercase";
+        }   
+    }
+    
+    void Cancel()
+    {   
+        StateHasChanged();
+        NavigationManager.NavigateTo("medic");
+    }
+}

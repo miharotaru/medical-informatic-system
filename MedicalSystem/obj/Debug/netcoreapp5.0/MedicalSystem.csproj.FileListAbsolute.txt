@@ -52,7 +52,6 @@ C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\
 C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\bin\Debug\netcoreapp5.0\MedicalSystem.runtimeconfig.json
 C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\bin\Debug\netcoreapp5.0\MedicalSystem.runtimeconfig.dev.json
 C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\bin\Debug\netcoreapp5.0\MedicalSystem.dll
-C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\bin\Debug\netcoreapp5.0\ref\MedicalSystem.dll
 C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\bin\Debug\netcoreapp5.0\MedicalSystem.pdb
 C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\bin\Debug\netcoreapp5.0\MedicalSystem.Views.dll
 C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\bin\Debug\netcoreapp5.0\MedicalSystem.Views.pdb
@@ -98,3 +97,4 @@ C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\
 C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\obj\Debug\netcoreapp5.0\Razor\Pages\PrescriptionComponents\DeletePrescription.razor.g.cs
 C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\obj\Debug\netcoreapp5.0\Razor\Pages\PrescriptionComponents\PrescriptionList.razor.g.cs
 C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\obj\Debug\netcoreapp5.0\Razor\Pages\PrescriptionComponents\UpdatePrescription.razor.g.cs
+C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\obj\Debug\netcoreapp5.0\refint\MedicalSystem.dll

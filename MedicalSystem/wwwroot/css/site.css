@@ -147,4 +147,14 @@ app {
         /* Never collapse the sidebar for wide screens */
         display: block;
     }
+    
+    /*add css class to display a hero image*/
+    .hero-image {
+        background-image: url("https://img.freepik.com/free-vector/stylish-white-background-with-diagonal-lines_1017-33199.jpg?t=st=1653737491~exp=1653738091~hmac=0aa5f8fea7e29c9bfc3dfd91837707ca731c9a27161cb81449e5d87d35f92d93&w=900");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+    }
 }

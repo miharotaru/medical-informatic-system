@@ -8,6 +8,7 @@
 <form>
     <div class="row">
         <div class="col-md-8">
+             <p class="text-danger">@validationMessage</p>
             <div class="form-group">
                 <label for="Name" class="control-label">Name</label>
                 <input form="Name" class="form-control" @bind="@objPatient.Name" />
@@ -37,13 +38,20 @@
 </form>
 
 @code { Patient objPatient = new Patient();
-
+        string validationMessage = "";
+        
             protected void CreatePatient()
             {
-                patientRepository.CreatePatient(objPatient);
-                NavigationManager.NavigateTo("patient");
+                if (PatientValidations.ValidatePatient(objPatient.Name, objPatient.Email))
+                {
+                    patientRepository.UpdatePatient(objPatient);
+                    NavigationManager.NavigateTo("patient");
+                }
+                else validationMessage = "Please check that the name stars with an uppercase and the email is valid before updating!";
             }
+
             void Cancel()
             {
                 NavigationManager.NavigateTo("patient");
-            } }
+            } 
+        }

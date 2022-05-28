@@ -91,18 +91,29 @@ using MedicalSystems.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 40 "C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\Pages\MedicComponents\AddMedic.razor"
-        Medic objMedic = new Medic();
+#line 41 "C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\Pages\MedicComponents\AddMedic.razor"
+       
+    Medic objMedic = new Medic();
+    string validationMessage = "";
 
-            protected void CreateMedic()
-            {
-                medicRepository.CreateMedic(objMedic);
-                NavigationManager.NavigateTo("medic");
-            }
-            void Cancel()
-            {
-                NavigationManager.NavigateTo("medic");
-            } 
+    protected void CreateMedic()
+    {
+        if (MedicValidations.ValidateMedic(objMedic.Name, objMedic.RatePerHour))
+        {
+            medicRepository.CreateMedic(objMedic);
+            NavigationManager.NavigateTo("medic");
+        }
+        else
+        {
+            validationMessage = "Please verify that the rate per hour is greater than 0 and the medic name is not empty and starts with uppercase";
+        }   
+    }
+    
+    void Cancel()
+    {   
+        StateHasChanged();
+        NavigationManager.NavigateTo("medic");
+    }
 
 #line default
 #line hidden
