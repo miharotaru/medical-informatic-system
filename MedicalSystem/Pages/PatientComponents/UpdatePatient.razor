@@ -8,6 +8,7 @@
 <form>
     <div class="row">
         <div class="col-md-8">
+            <p class="text-danger">@validationMessage</p>
             <div class="form-group">
                 <label for="Name" class="control-label">Name</label>
                 <input form="Name" class="form-control" @bind="@objPatient.Name" />
@@ -25,28 +26,36 @@
     <div class="row">
         <div class="col-md-4">
             <div class="form-group">
-                <input type="button" class="btn btn-primary" @onclick="@UpdateMedicInfo" value="Update" />
+                <input type="button" class="btn btn-primary" @onclick="@UpdatePatientInfo" value="Update" />
                 <input type="button" class="btn btn-primary" @onclick="@Cancel" value="Cancel" />
             </div>
         </div>
     </div>
 </form>
 
-@code { [Parameter]
-            public string CurrentID { get; set; }
-            Patient objPatient = new Patient();
+@code {
+        [Parameter]
+        public string CurrentID { get; set; }
+        Patient objPatient = new Patient();
+        string validationMessage = "";
 
-            protected override async Task OnInitializedAsync()
-            {
-                objPatient = await Task.Run(() => patientRepository.GetPatientById(Convert.ToInt32(CurrentID)));
-            }
+    protected override async Task OnInitializedAsync()
+    {
+        objPatient = await Task.Run(() => patientRepository.GetPatientById(Convert.ToInt32(CurrentID)));
+    }
 
-            protected void UpdateMedicInfo()
-            {
-                patientRepository.UpdatePatient(objPatient);
-                NavigationManager.NavigateTo("patient");
-            }
-            void Cancel()
-            {
-                NavigationManager.NavigateTo("patient");
-            } }
+    protected void UpdatePatientInfo()
+    {
+        if (PatientValidations.ValidatePatient(objPatient.Name, objPatient.Email))
+        {
+            patientRepository.UpdatePatient(objPatient);
+            NavigationManager.NavigateTo("patient");
+        }
+        else validationMessage = "Please check that the name stars with an uppercase and the email is valid before updating!";
+    }
+    
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("patient");
+    }
+}
