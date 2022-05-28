@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "V8Wvvqoan2PfLmRUJWQaCQbLMhy/lDgfjRCwa3xxxT1n7yytGe4LCYcrzlRdIyrbUpZA7gja4E7rQp97+4UIjg==",
+  "dgSpecHash": "cPb8o8Oz80GuoY3MpTPHAoUn5z6HwKK1Onr35pbVLuRN06DHsXRqEk0bIUUnjJNoAaiyYlT6Qh9Ftck4XdjxhQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Catalin\\Desktop\\Medical System\\medical-informatic-system\\MedicalSystem\\MedicalSystem.csproj",
   "expectedPackageFiles": [
@@ -100,7 +100,8 @@
     "C:\\Users\\Catalin\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Catalin\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Catalin\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Catalin\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\Catalin\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\Catalin\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
   ],
   "logs": []
 }
