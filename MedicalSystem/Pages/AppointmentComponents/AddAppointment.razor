@@ -23,8 +23,8 @@
 
             <div class="form-group">
                 <label for="Date" class="control-label">Appointment Date</label>
-                <input form="Date" class="form-control" @bind="@objAppointment.Date" />
-            </div>        
+                <input type="Date" @bind="objAppointment.Date" @bind:format="yyyy-MM-dd" />
+            </div>
         </div>
     </div>
     <div class="row">
