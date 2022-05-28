@@ -69,6 +69,20 @@ using MedicalSystems;
 #line hidden
 #nullable disable
 #nullable restore
+#line 10 "C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\_Imports.razor"
+using Syncfusion.Blazor;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 11 "C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\_Imports.razor"
+using Syncfusion.Blazor.Charts;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 1 "C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\App.razor"
 using MedicalSystem.Shared;
 

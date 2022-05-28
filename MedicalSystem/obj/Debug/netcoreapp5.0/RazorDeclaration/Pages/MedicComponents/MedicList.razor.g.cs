@@ -76,8 +76,22 @@ using MedicalSystem.Shared;
 #line hidden
 #nullable disable
 #nullable restore
+#line 10 "C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\_Imports.razor"
+using Syncfusion.Blazor;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 2 "C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\Pages\MedicComponents\MedicList.razor"
 using MedicalSystems.Data;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\Pages\MedicComponents\MedicList.razor"
+using Syncfusion.Blazor.Charts;
 
 #line default
 #line hidden
@@ -91,11 +105,12 @@ using MedicalSystems.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 46 "C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\Pages\MedicComponents\MedicList.razor"
-        List<Medic> objMedics;
+#line 53 "C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\Pages\MedicComponents\MedicList.razor"
+       
+    List<Medic> objMedics;
     protected override async Task OnInitializedAsync()
     {
-        objMedics = await Task.Run(() => medicRepository.GetMedics());
+        objMedics = await Task.Run(() => medicRepository.GetMedics().Take(6).ToList());
     }
 
 #line default

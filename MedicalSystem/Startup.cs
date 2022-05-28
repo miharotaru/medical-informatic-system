@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Syncfusion.Blazor;
 
 namespace MedicalSystems
 {
@@ -27,6 +28,7 @@ namespace MedicalSystems
             services.AddScoped<PatientRepository>();
             services.AddScoped<AppointmentRepository>();
             services.AddScoped<PrescriptionRepository>();
+            services.AddSyncfusionBlazor();
             services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }

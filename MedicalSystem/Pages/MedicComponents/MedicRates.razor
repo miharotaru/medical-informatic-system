@@ -1,0 +1,23 @@
+﻿@page "/medic-rates"
+@using MedicalSystems.Data
+@using Syncfusion.Blazor.Charts
+@inject MedicRepository medicRepository
+
+<h3>Medic Rates Chart</h3>
+
+<SfChart Title="Medic Rates">
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@objMedics" XName="Name" YName="RatePerHour" Type="ChartSeriesType.Line">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+        
+@code { List<Medic> objMedics;
+    protected override async Task OnInitializedAsync()
+    {
+        objMedics = await Task.Run(() => medicRepository.GetMedics());
+        objMedics = objMedics.OrderBy(x => x.RatePerHour).ToList();
+    }
+}

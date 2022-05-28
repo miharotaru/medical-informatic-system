@@ -35,6 +35,9 @@ namespace MedicalSystems.Migrations
                     b.Property<string>("Patient")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("PrescriptionId")
+                        .HasColumnType("int");
+
                     b.HasKey("AppointmentId");
 
                     b.ToTable("Appointments");

@@ -44,6 +44,6 @@ else
 @code { List<Prescription> objPrescription;
     protected override async Task OnInitializedAsync()
     {
-        objPrescription = await Task.Run(() => prescriptionRepository.GetPrescriptions());
+        objPrescription = await Task.Run(() => prescriptionRepository.GetPrescriptions().Take(6).ToList());
     }
 }

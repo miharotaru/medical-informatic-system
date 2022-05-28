@@ -76,6 +76,20 @@ using MedicalSystem.Shared;
 #line hidden
 #nullable disable
 #nullable restore
+#line 10 "C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\_Imports.razor"
+using Syncfusion.Blazor;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 11 "C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\_Imports.razor"
+using Syncfusion.Blazor.Charts;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 2 "C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\Pages\AppointmentComponents\AddAppointment.razor"
 using MedicalSystems.Data;
 
@@ -97,11 +111,15 @@ using MedicalSystems.Data;
     string message = "Here you can add an appointment";
     protected void CreateAppointment()
     {
-
-        var result = appointmentRepository.CreateAppointment(objAppointment);
-        if (result == true)
+        if (AppointmentValidations.IsValidAppointment(objAppointment))
+        {
+            appointmentRepository.CreateAppointment(objAppointment);
             NavigationManager.NavigateTo("appointment");
-        else message = "Either the medic or the patient data is not correct";
+        }
+        else
+        {
+           message = "Please add valid medic and patient data";      
+        }
     }
     void Cancel()
             {

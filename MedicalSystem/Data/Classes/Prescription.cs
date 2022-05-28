@@ -6,7 +6,7 @@ namespace MedicalSystems.Data
     {
         [Key]
         public int PrescriptionId { get; set; }
-        public string DrugNames { get; set; }
+        public string DrugNames { get; set; } = " ";
         public string IsCompensated { get; set; } = "No";
     }
 }

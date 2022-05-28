@@ -5,6 +5,7 @@
 
 <h2>Update Prescription</h2>
 <hr />
+<p class="text-danger">@validationMessage</p>
 <form>
     <div class="row">
         <div class="col-md-8">
@@ -31,21 +32,36 @@
     </div>
 </form>
 
-@code { [Parameter]
-            public string CurrentID { get; set; }
-            Prescription objPrescription = new Prescription();
-
-            protected override async Task OnInitializedAsync()
-            {
+@code {
+    [Parameter]
+    public string CurrentID { get; set; }
+    Prescription objPrescription = new Prescription();
+    string validationMessage = "Here you can update prescriptions";
+    string initialDrugNames;
+    
+    protected override async Task OnInitializedAsync()
+    {
                 objPrescription = await Task.Run(() => prescriptionRepository.GetPrescriptionById(Convert.ToInt32(CurrentID)));
+                initialDrugNames = objPrescription.DrugNames;
             }
 
             protected void UpdatePrescriptionInfo()
             {
-                prescriptionRepository.UpdatePrescription(objPrescription);
-                NavigationManager.NavigateTo("prescription");
+               
+                if (PrescriptionValidations.ValidateDrugs(objPrescription.DrugNames))
+                {
+                    prescriptionRepository.UpdatePrescription(objPrescription);
+                    NavigationManager.NavigateTo("prescription");
+                }
+                else
+                {
+                    validationMessage = "Please enter a valid drug list";
+                    objPrescription.DrugNames = initialDrugNames;
+                }
             }
+            
             void Cancel()
             {
                 NavigationManager.NavigateTo("prescription");
-            } }
+            } 
+}

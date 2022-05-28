@@ -5,7 +5,7 @@
 
 <h2>Add Appointment</h2>
 <hr />
-<p>@message</p>
+<p class="text-danger">@message</p>
 
 <form>
     <div class="row">
@@ -24,7 +24,7 @@
             <div class="form-group">
                 <label for="Date" class="control-label">Appointment Date</label>
                 <input form="Date" class="form-control" @bind="@objAppointment.Date" />
-            </div>
+            </div>        
         </div>
     </div>
     <div class="row">
@@ -42,11 +42,15 @@
     string message = "Here you can add an appointment";
     protected void CreateAppointment()
     {
-
-        var result = appointmentRepository.CreateAppointment(objAppointment);
-        if (result == true)
+        if (AppointmentValidations.IsValidAppointment(objAppointment))
+        {
+            appointmentRepository.CreateAppointment(objAppointment);
             NavigationManager.NavigateTo("appointment");
-        else message = "Either the medic or the patient data is not correct";
+        }
+        else
+        {
+           message = "Please add valid medic and patient data";      
+        }
     }
     void Cancel()
             {

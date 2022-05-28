@@ -1,0 +1,61 @@
+﻿@page "/update-appointment/{CurrentID}"
+@using MedicalSystems.Data
+@inject AppointmentRepository appointmentRepository
+@inject NavigationManager NavigationManager
+
+<h2>Assign Drugs</h2>
+<hr />
+
+<form>
+    <div class="row">
+        <div class="col-md-8">
+            <p class="text-danger">@validationMessage</p>
+             <div class="form-group">
+                <label for="PrescriptionId" class="control-label">Prescription</label>
+                <input form="PrescriptionId" class="form-control" @bind="@objAppointment.PrescriptionId" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="button" class="btn btn-primary" @onclick="@UpdateAppointmentInfo" value="Update" />
+                <input type="button" class="btn btn-primary" @onclick="@Cancel" value="Cancel" />
+            </div>
+        </div>
+    </div>
+</form>
+
+@code {
+    [Parameter]
+    public string CurrentID { get; set; }
+    Appointment objAppointment = new Appointment();
+    Appointment initialAppointmentValues = new Appointment();
+    string validationMessage = "Here you can assign a list of drugs to the appointment";
+
+    protected override async Task OnInitializedAsync()
+    {
+        objAppointment = await Task.Run(() => appointmentRepository.GetAppointmentById(Convert.ToInt32(CurrentID)));
+        initialAppointmentValues.PrescriptionId = objAppointment.PrescriptionId;
+    }
+
+    protected void UpdateAppointmentInfo()
+    {
+        if(appointmentRepository.ValidatePrescription(objAppointment.PrescriptionId))
+        {
+            appointmentRepository.UpdateAppointment(objAppointment);
+
+            NavigationManager.NavigateTo("appointment"); 
+        }
+        else
+        {
+            validationMessage = "Please assign a valid prescription Id";
+            objAppointment.PrescriptionId = initialAppointmentValues.PrescriptionId;
+        }   
+    }
+    
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("appointment");
+    }
+}

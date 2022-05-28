@@ -76,6 +76,20 @@ using MedicalSystem.Shared;
 #line hidden
 #nullable disable
 #nullable restore
+#line 10 "C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\_Imports.razor"
+using Syncfusion.Blazor;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 11 "C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\_Imports.razor"
+using Syncfusion.Blazor.Charts;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 2 "C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\Pages\AppointmentComponents\AppointmentList.razor"
 using MedicalSystems.Data;
 
@@ -91,12 +105,12 @@ using MedicalSystems.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 43 "C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\Pages\AppointmentComponents\AppointmentList.razor"
+#line 48 "C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\Pages\AppointmentComponents\AppointmentList.razor"
         List<Appointment> objAppointments;
 
     protected override async Task OnInitializedAsync()
     {
-        objAppointments = await Task.Run(() => appointmentRepository.GetAppointments());
+        objAppointments = await Task.Run(() => appointmentRepository.GetAppointments().Take(6).ToList());
     }
 
 #line default

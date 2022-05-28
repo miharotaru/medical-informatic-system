@@ -1,10 +1,16 @@
 ﻿@page "/medic"
 @using MedicalSystems.Data
+@using Syncfusion.Blazor.Charts
 @inject MedicRepository medicRepository
 
 <NavLink class="nav-link" href="add-medic">
      <button class="btn btn-primary"><span class="oi oi-chevron-bottom" aria-hidden="true"></span> Add Medic</button>
 </NavLink>
+
+<NavLink class="nav-link" href="medic-rates">
+     <button class="btn btn-primary"><span class="oi oi-chevron-bottom" aria-hidden="true"></span> See medic rates chart</button>
+</NavLink>
+
 <br /><br />
 <h1>Medics</h1>
 @if (objMedics == null)
@@ -41,11 +47,13 @@ else
             </tr>
 }
         </tbody>
-    </table>}
+    </table>
+}
 
-@code { List<Medic> objMedics;
+@code {
+    List<Medic> objMedics;
     protected override async Task OnInitializedAsync()
     {
-        objMedics = await Task.Run(() => medicRepository.GetMedics());
+        objMedics = await Task.Run(() => medicRepository.GetMedics().Take(6).ToList());
     }
 }

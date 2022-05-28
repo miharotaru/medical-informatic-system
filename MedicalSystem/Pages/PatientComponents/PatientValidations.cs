@@ -6,7 +6,7 @@ namespace MedicalSystem.Pages.PatientComponents
     {
         public static bool ValidatePatient(string name, string email)
         {
-            if (name.Length > 0 && email.Length > 0 && StartsWithUpperCase(name) && EmailContainsAtCharacter(email) && EmailEndsWithDotCom(email))
+            if (name.Length > 0 && email.Length > 0 && StartsWithUpperCase(name) && EmailContainsAtCharacter(email) && EmailEndsWithDotCom(email) && email!=null && name!=null)
             {
                 return true;
             }

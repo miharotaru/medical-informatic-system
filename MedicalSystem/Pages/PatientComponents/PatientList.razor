@@ -48,6 +48,6 @@ else
 @code { List<Patient> objPatients;
     protected override async Task OnInitializedAsync()
     {
-        objPatients = await Task.Run(() => patientRepository.GetPatients());
+        objPatients = await Task.Run(() => patientRepository.GetPatients().Take(6).ToList());
     }
 }

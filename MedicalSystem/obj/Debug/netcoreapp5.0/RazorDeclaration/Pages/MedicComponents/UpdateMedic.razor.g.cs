@@ -76,6 +76,20 @@ using MedicalSystem.Shared;
 #line hidden
 #nullable disable
 #nullable restore
+#line 10 "C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\_Imports.razor"
+using Syncfusion.Blazor;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 11 "C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\_Imports.razor"
+using Syncfusion.Blazor.Charts;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 2 "C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\Pages\MedicComponents\UpdateMedic.razor"
 using MedicalSystems.Data;
 
@@ -96,7 +110,7 @@ using MedicalSystems.Data;
     [Parameter]
     public string CurrentID { get; set; }
     Medic objMedic = new Medic();
-    string validationMessage = "";
+    string validationMessage = "Here you can update the medic data";
     Medic initialMedicValues = new Medic();
 
     protected override async Task OnInitializedAsync()

@@ -7,8 +7,9 @@ namespace MedicalSystems.Data
     {
         [Key]
         public int AppointmentId { get; set; }
-        public string Medic { get; set; }
-        public string Patient { get; set; }
+        public string Medic { get; set; } = " ";
+        public string Patient { get; set; } = " ";
+        public int PrescriptionId { get; set; }
         public DateTime Date { get; set; } = DateTime.UtcNow;
     }
 }

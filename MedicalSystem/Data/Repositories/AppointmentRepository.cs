@@ -62,5 +62,14 @@ namespace MedicalSystems.Data
             _db.SaveChanges();
             return true;
         }
+
+        public bool ValidatePrescription(int PrescriptionId)
+        {
+            if (_db.Prescriptions.Where(x => x.PrescriptionId == PrescriptionId).FirstOrDefault() != null)
+            {
+                return true;
+            }
+            else return false;
+        }
     }
 }

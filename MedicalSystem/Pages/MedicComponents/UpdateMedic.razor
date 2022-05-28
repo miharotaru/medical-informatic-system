@@ -5,9 +5,9 @@
 
 <h2>Update Medic</h2>
 <hr />
+<p class="text-danger">@validationMessage</p>
 <form>
     <div class="row">
-         <p class="text-danger">@validationMessage</p>
         <div class="col-md-8">
             <div class="form-group">
                 <label for="Name" class="control-label">Name</label>
@@ -42,7 +42,7 @@
     [Parameter]
     public string CurrentID { get; set; }
     Medic objMedic = new Medic();
-    string validationMessage = "";
+    string validationMessage = "Here you can update the medic data";
     Medic initialMedicValues = new Medic();
 
     protected override async Task OnInitializedAsync()

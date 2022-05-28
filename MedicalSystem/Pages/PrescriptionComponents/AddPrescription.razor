@@ -4,7 +4,7 @@
 @inject NavigationManager NavigationManager
 
 <h2>Add Prescription</h2>
-<p>@message</p>
+<p class="text-danger">@validationMessage</p>
 <hr />
 <form>
     <div class="row">
@@ -32,15 +32,24 @@
     </div>
 </form>
 
-@code { Prescription objPrescription = new Prescription();
-        string message = "Here you can manage prescriptions";
+@code {
+    Prescription objPrescription = new Prescription();
+    string validationMessage = "Here you can create prescriptions";
 
-            protected void CreatePrescription()
-            {
-                prescriptionRepository.CreatePrescription(objPrescription);
-                NavigationManager.NavigateTo("prescription");
-            }
+    protected void CreatePrescription()
+    {
+        if(PrescriptionValidations.ValidateDrugs(objPrescription.DrugNames))
+        {
+            prescriptionRepository.CreatePrescription(objPrescription);
+            NavigationManager.NavigateTo("prescription");
+        }
+        else
+        {
+            validationMessage = "Please enter a valid drug list";
+        }
+     }
             void Cancel()
             {
                 NavigationManager.NavigateTo("prescription");
-            } }
+            } 
+}
