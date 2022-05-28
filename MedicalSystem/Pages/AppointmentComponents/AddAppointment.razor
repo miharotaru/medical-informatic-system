@@ -18,12 +18,14 @@
 
             <div class="form-group">
                 <label for="LastName" class="control-label">Patient</label>
-                <input form="LastName" class="form-control" @bind="@objAppointment.Patient" />
+                <input  form="LastName" class="form-control" @bind-value="@objAppointment.Patient" />
             </div>
 
             <div class="form-group">
                 <label for="Date" class="control-label">Appointment Date</label>
-                <input form="Date" class="form-control" @bind="@objAppointment.Date" />
+               
+
+                <input form="Date" class="form-control" @bind-value="@objAppointment.Date" />
             </div>
         </div>
     </div>
