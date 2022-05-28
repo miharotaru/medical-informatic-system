@@ -147,4 +147,14 @@ app {
         /* Never collapse the sidebar for wide screens */
         display: block;
     }
+
+    .hero {
+        background-image: url('https://picsum.photos/1920/1080');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100%;
+        position: relative;
+    }
 }

@@ -1,0 +1,89 @@
+﻿@*@page "/find-apartment"
+@using REM.Presentation.Data;
+@using REM.Presentation.Data.Classes;
+@using REM.Presentation.Data.Services;
+@inject ApartmentService objApartmentService
+
+<AuthorizeView>
+    <Authorized>
+        <h4>Find Apartments</h4>
+
+        <div class="form-group">
+            <label for="Construction Phase" class="control-label">Construction Phase</label>
+            <select @bind="@Apartment.ConstructionPhase" class="form-control">
+                <option value="Phase">Select the in progress work</option>
+                <option value="Structure">Base Structure Development</option>
+                <option value="Services">Services - Electricity, Sewage</option>
+                <option value="Tapestry and Flooring">Tapestry and Flooring</option>
+                <option value="Appliances">Appliances and furniture installation</option>
+                <option value="Sell">Approved to sell or rent</option>
+            </select>
+        </div>
+
+        <button @onclick="StartSearch">
+            Find Apartment
+        </button>
+
+
+        @if (objApartment == null)
+        {
+    <p><em>Loading....</em></p> }
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Apartment Id</th>
+                <th>Price</th>
+                <th>Number of Rooms</th>
+                <th>Confort</th>
+                <th>Estate Id</th>
+                <th>Status</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var apartment in objApartment)
+            {
+    <tr>
+        <td>@apartment.ApartmentId</td>
+        <td>@apartment.Price</td>
+        <td>@apartment.NumberOfRooms</td>
+        <td>@apartment.Confort</td>
+        <td>@apartment.AssignedEstateId</td>
+        <td>
+            <a class="nav-link" href="ApartmentStatus/@apartment.ApartmentId">
+                <span class="oi oi-project" aria-hidden="true"></span> Status
+            </a>
+        </td>
+
+        <td>
+            <a class="nav-link" href="DeleteApartment/@apartment.ApartmentId">
+                <span class="oi oi-trash" aria-hidden="true"></span>Delete
+            </a>
+        </td>
+    </tr>
+}
+        </tbody>
+    </table>}
+    </Authorized>
+    <NotAuthorized>
+        <p>Just authorized users can access this, sorry</p>
+    </NotAuthorized>
+</AuthorizeView>
+
+@code {
+    List<Apartment> objApartment;
+    Apartment Apartment = new Apartment();
+    protected override async Task OnInitializedAsync()
+    {
+
+    }
+
+    protected async Task StartSearch()
+    {
+        objApartment = new List<Apartment>();
+        objApartment = await Task.Run(() => objApartmentService.GetApartmentByConstructionPhase(Apartment.ConstructionPhase));
+    }
+}
+*@
