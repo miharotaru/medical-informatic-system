@@ -1,0 +1,59 @@
+﻿@page "/medic"
+@using MedicalSystems.Data
+@using Syncfusion.Blazor.Charts
+@inject MedicRepository medicRepository
+
+<NavLink class="nav-link" href="add-medic">
+     <button class="btn btn-primary"><span class="oi oi-chevron-bottom" aria-hidden="true"></span> Add Medic</button>
+</NavLink>
+
+<NavLink class="nav-link" href="medic-rates">
+     <button class="btn btn-primary"><span class="oi oi-chevron-bottom" aria-hidden="true"></span> See medic rates chart</button>
+</NavLink>
+
+<br /><br />
+<h1>Medics</h1>
+@if (objMedics == null)
+{
+    <p><em>Loading....</em></p> }
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Medic Id</th>
+                <th>Name</th>
+                <th>Specialty</th>
+                <th>Rate per Hour</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var med in objMedics)
+            {
+            <tr>
+                <td>@med.MedicId</td>
+                <td>@med.Name</td>
+                <td>@med.Specialty</td>
+                <td>@med.RatePerHour</td>
+                <td>
+                    <a class="nav-link" href="update-medic/@med.MedicId">
+                        <span class="oi oi-pencil" aria-hidden="true"></span>Edit
+                    </a>
+                    <a class="nav-link" href="delete-medic/@med.MedicId">
+                        <span class="oi oi-trash" aria-hidden="true"></span>Delete
+                    </a>
+                </td>
+            </tr>
+}
+        </tbody>
+    </table>
+}
+
+@code {
+    List<Medic> objMedics;
+    protected override async Task OnInitializedAsync()
+    {
+        objMedics = await Task.Run(() => medicRepository.GetMedics());
+    }
+}

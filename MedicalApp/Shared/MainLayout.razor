@@ -1,9 +1,14 @@
 ﻿@inherits LayoutComponentBase
 
 <div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+    
+<div class="sidebar" 
+     style="background: #005C97;  
+            background: -webkit-linear-gradient(to bottom, #363795, #005C97);
+            background: linear-gradient(to bottom, #363795, #005C97);
+            ">
+    <NavMenu />
+</div>
 
     <div class="main">
         <div class="top-row px-4 auth">
@@ -11,8 +16,10 @@
             <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
         </div>
 
-        <div class="content px-4">
-            @Body
-        </div>
+
+
+         <div class="content px-4 hero-image">
+        @Body
+    </div>
     </div>
 </div>

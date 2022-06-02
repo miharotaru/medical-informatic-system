@@ -1,0 +1,56 @@
+﻿@page "/add-prescription"
+@using MedicalSystem.Pages.PrescriptionComponents
+@using MedicalSystems.Data
+@inject PrescriptionRepository prescriptionRepository
+@inject NavigationManager NavigationManager
+
+<h2>Add Prescription</h2>
+<p class="text-danger">@validationMessage</p>
+<hr />
+<form>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="DrugNames" class="control-label">Drug List</label>
+                <input form="DrugNames" class="form-control" @bind="@objPrescription.DrugNames" />
+            </div>
+            <div class="form-group">
+                <label for="IsCompensated" class="control-label">Is Compensated</label>
+                 <select class="form-control" @bind="@objPrescription.IsCompensated">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="button" class="btn btn-primary" @onclick="@CreatePrescription" value="Save" />
+                <input type="button" class="btn btn-primary" @onclick="@Cancel" value="Cancel" />
+            </div>
+        </div>
+    </div>
+</form>
+
+@code {
+    Prescription objPrescription = new Prescription();
+    string validationMessage = "Here you can create prescriptions";
+
+    protected void CreatePrescription()
+    {
+        if(PrescriptionValidations.ValidateDrugs(objPrescription.DrugNames))
+        {
+            prescriptionRepository.CreatePrescription(objPrescription);
+            NavigationManager.NavigateTo("prescription");
+        }
+        else
+        {
+            validationMessage = "Please enter a valid drug list";
+        }
+     }
+            void Cancel()
+            {
+                NavigationManager.NavigateTo("prescription");
+            } 
+}

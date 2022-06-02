@@ -1,0 +1,71 @@
+﻿@page "/update-patient/{CurrentID}"
+@using MedicalSystem.Pages.PatientComponents
+@using MedicalSystems.Data
+@inject PatientRepository patientRepository
+@inject NavigationManager NavigationManager
+
+<h2>Update Patient</h2>
+<hr />
+
+<form>
+    <div class="row">
+        <div class="col-md-8">
+            <p class="text-danger">@validationMessage</p>
+            <div class="form-group">
+                <label for="Name" class="control-label">Name</label>
+                <input form="Name" class="form-control" @bind="@objPatient.Name" />
+            </div>
+            <div class="form-group">
+                <label for="Symptoms" class="control-label">Symptoms</label>
+                <input form="Symptoms" class="form-control" @bind="@objPatient.Symptoms" />
+            </div>
+            <div class="form-group">
+                <label for="Email" class="control-label">Email</label>
+                <input form="Email" class="form-control" @bind="@objPatient.Email" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="button" class="btn btn-primary" @onclick="@UpdatePatientInfo" value="Update" />
+                <input type="button" class="btn btn-primary" @onclick="@Cancel" value="Cancel" />
+            </div>
+        </div>
+    </div>
+</form>
+
+@code {
+        [Parameter]
+        public string CurrentID { get; set; }
+        Patient objPatient = new Patient();
+        Patient initialPatientValues = new Patient();
+        string validationMessage = "Here you can update the patient data";
+
+    protected override async Task OnInitializedAsync()
+    {
+        objPatient = await Task.Run(() => patientRepository.GetPatientById(Convert.ToInt32(CurrentID)));
+        initialPatientValues.Email = objPatient.Email;
+        initialPatientValues.Name = objPatient.Name;
+    }
+
+    protected void UpdatePatientInfo()
+    {
+        if (PatientValidations.ValidatePatient(objPatient.Name, objPatient.Email))
+        {
+            patientRepository.UpdatePatient(objPatient);
+            NavigationManager.NavigateTo("patient");
+        }
+        else
+        {
+            validationMessage = "Please check that the name stars with an uppercase and the email is valid before updating!";
+            objPatient.Email = initialPatientValues.Email;
+            objPatient.Name = initialPatientValues.Name;
+        }
+    }
+    
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("patient");
+    }
+}
