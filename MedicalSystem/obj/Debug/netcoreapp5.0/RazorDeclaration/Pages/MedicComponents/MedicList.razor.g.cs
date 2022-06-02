@@ -110,7 +110,7 @@ using Syncfusion.Blazor.Charts;
     List<Medic> objMedics;
     protected override async Task OnInitializedAsync()
     {
-        objMedics = await Task.Run(() => medicRepository.GetMedics().Take(6).ToList());
+        objMedics = await Task.Run(() => medicRepository.GetMedics());
     }
 
 #line default

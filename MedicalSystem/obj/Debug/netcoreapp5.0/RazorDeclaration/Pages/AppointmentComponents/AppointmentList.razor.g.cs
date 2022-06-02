@@ -110,7 +110,7 @@ using MedicalSystems.Data;
 
     protected override async Task OnInitializedAsync()
     {
-        objAppointments = await Task.Run(() => appointmentRepository.GetAppointments().Take(6).ToList());
+        objAppointments = await Task.Run(() => appointmentRepository.GetAppointments());
     }
 
 #line default

@@ -49,6 +49,6 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        objAppointments = await Task.Run(() => appointmentRepository.GetAppointments().Take(6).ToList());
+        objAppointments = await Task.Run(() => appointmentRepository.GetAppointments());
     }
 }
