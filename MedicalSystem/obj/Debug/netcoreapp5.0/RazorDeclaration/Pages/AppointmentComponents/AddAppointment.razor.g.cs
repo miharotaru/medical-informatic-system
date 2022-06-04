@@ -108,12 +108,15 @@ using MedicalSystems.Data;
 #line 40 "C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\Pages\AppointmentComponents\AddAppointment.razor"
        
     Appointment objAppointment = new Appointment();
+    string email ="";
+
     string message = "Here you can add an appointment";
     protected void CreateAppointment()
     {
         if (AppointmentValidations.IsValidAppointment(objAppointment))
         {
-            appointmentRepository.CreateAppointment(objAppointment);
+            email = appointmentRepository.GetPatientMailByAppointment(objAppointment);
+            appointmentRepository.CreateAppointment(objAppointment, email);
             NavigationManager.NavigateTo("appointment");
         }
         else

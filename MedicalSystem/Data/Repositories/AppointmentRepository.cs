@@ -18,7 +18,7 @@ namespace MedicalSystems.Data
             return appointments;
         }
 
-        public bool CreateAppointment(Appointment appointment)
+        public bool CreateAppointment(Appointment appointment, string patientMail)
         {
             var validationResult = ValidateAppointment(appointment.Medic, appointment.Patient);
 
@@ -26,6 +26,8 @@ namespace MedicalSystems.Data
             {
                 _db.Appointments.Add(appointment);
                 _db.SaveChanges();
+                
+                SendMailConfirmation(appointment, patientMail);
                 return true;
             }
 
@@ -70,6 +72,14 @@ namespace MedicalSystems.Data
                 return true;
             }
             else return false;
+        }
+        
+
+        public string GetPatientMailByAppointment(Appointment appointment)
+        {
+            var result = _db.Patients.Where(p => p.Name == appointment.Patient).FirstOrDefault();
+
+            return result.Email;
         }
     }
 }

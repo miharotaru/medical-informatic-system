@@ -58,6 +58,10 @@
               "target": "Package",
               "version": "[3.18.10, )"
             },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[107.3.0, )"
+            },
             "Syncfusion.Blazor": {
               "target": "Package",
               "version": "[18.1.0.42, )"

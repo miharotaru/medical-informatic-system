@@ -106,3 +106,4 @@ C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\
 C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\bin\Debug\netcoreapp5.0\en-US\Syncfusion.Blazor.resources.dll
 C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\obj\Debug\netcoreapp5.0\RazorDeclaration\Pages\MedicComponents\MedicRates.razor.g.cs
 C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\obj\Debug\netcoreapp5.0\Razor\Pages\MedicComponents\MedicRates.razor.g.cs
+C:\Users\Catalin\Desktop\Medical System\medical-informatic-system\MedicalSystem\bin\Debug\netcoreapp5.0\RestSharp.dll
