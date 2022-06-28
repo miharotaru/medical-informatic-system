@@ -13,5 +13,6 @@ namespace MedicalSystems.Data
 
         public bool DeleteAppointment(Appointment appointment);
         public string GetPatientMailByAppointment(Appointment appointment);
+        public List<AppointmentExtended> GetAppointmentDetails();
     }
 }

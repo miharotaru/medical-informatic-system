@@ -218,3 +218,5 @@ C:\Users\Catalin\Desktop\MEdical ceva\medical-informatic-system\MedicalSystem\ob
 C:\Users\Catalin\Desktop\MEdical ceva\medical-informatic-system\MedicalSystem\obj\Debug\netcoreapp5.0\ref\MedicalSystem.dll
 C:\Users\Catalin\Desktop\MEdical ceva\medical-informatic-system\MedicalSystem\obj\Debug\netcoreapp5.0\RazorDeclaration\Pages\AppointmentComponents\Schedule.razor.g.cs
 C:\Users\Catalin\Desktop\MEdical ceva\medical-informatic-system\MedicalSystem\obj\Debug\netcoreapp5.0\Razor\Pages\AppointmentComponents\Schedule.razor.g.cs
+C:\Users\Catalin\Desktop\MEdical ceva\medical-informatic-system\MedicalSystem\obj\Debug\netcoreapp5.0\RazorDeclaration\Pages\AppointmentComponents\AppointmentDetails.razor.g.cs
+C:\Users\Catalin\Desktop\MEdical ceva\medical-informatic-system\MedicalSystem\obj\Debug\netcoreapp5.0\Razor\Pages\AppointmentComponents\AppointmentDetails.razor.g.cs
