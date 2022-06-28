@@ -5940,11 +5940,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Catalin\\Desktop\\Medical System\\medical-informatic-system\\MedicalSystem\\MedicalSystem.csproj",
+      "projectUniqueName": "C:\\Users\\Catalin\\Desktop\\MEdical ceva\\medical-informatic-system\\MedicalSystem\\MedicalSystem.csproj",
       "projectName": "MedicalSystem",
-      "projectPath": "C:\\Users\\Catalin\\Desktop\\Medical System\\medical-informatic-system\\MedicalSystem\\MedicalSystem.csproj",
+      "projectPath": "C:\\Users\\Catalin\\Desktop\\MEdical ceva\\medical-informatic-system\\MedicalSystem\\MedicalSystem.csproj",
       "packagesPath": "C:\\Users\\Catalin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Catalin\\Desktop\\Medical System\\medical-informatic-system\\MedicalSystem\\obj\\",
+      "outputPath": "C:\\Users\\Catalin\\Desktop\\MEdical ceva\\medical-informatic-system\\MedicalSystem\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Catalin\\AppData\\Roaming\\NuGet\\NuGet.Config",

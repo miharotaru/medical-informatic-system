@@ -1,0 +1,63 @@
+﻿@page "/schedule"
+@using MedicalSystems.Data
+@inject AppointmentRepository appointmentRepository
+
+
+<h1>Schedule</h1>
+@if (objAppointments == null)
+{
+    <p><em>Loading....</em></p> }
+else
+{
+    <h4>Filter appointments by medic and date</h4>
+    
+    <p>Enter the medic name: </p>
+    <p><input type="text" @bind="medic"/></p>
+
+    <div class="form-group">
+        <label for="Date" class="control-label">Select a Date</label>
+        <input type="Date" @bind="date" @bind:format="yyyy-MM-dd" />
+    </div>
+
+    <button class="btm btn-primary" @onclick="HandleApplyFilter">Filter</button>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Medic</th>
+                <th>Patient</th>
+                <th>Appointment Date</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var appointment in filteredAppointments)
+            {
+            <tr>
+                <td>@appointment.Medic</td>
+                <td>@appointment.Patient</td>
+                <td>@appointment.Date</td>
+                <td>Ceva link</td>
+            </tr>
+}
+        </tbody>
+    </table>}
+
+@code {
+    List<Appointment> objAppointments;
+    List<Appointment> filteredAppointments;
+    string medic = "Marcelescu";
+    DateTime date = DateTime.Today;
+
+    protected override async Task OnInitializedAsync()
+    {
+        objAppointments = await Task.Run(() => appointmentRepository.GetAppointments());
+        filteredAppointments = objAppointments;
+    }
+
+    public void HandleApplyFilter()
+    {
+        var result = objAppointments.Where(x => x.Date.Day == date.Day && x.Date.Year == date.Year && x.Date.Month == date.Month && x.Medic == medic).ToList();
+        filteredAppointments = result;
+    }
+}

@@ -27,7 +27,7 @@ namespace MedicalSystems.Data
                 _db.Appointments.Add(appointment);
                 _db.SaveChanges();
                 
-                SendMailConfirmation(appointment, patientMail);
+                //SendMailConfirmation(appointment, patientMail);
                 return true;
             }
 

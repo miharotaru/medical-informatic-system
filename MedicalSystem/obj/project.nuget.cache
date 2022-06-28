@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "J9ys06aMWoYPS0jo8acCQQ3JraHQjxKMSaJxi0gbqvvH/WdqQvceAO0azhA27pO+1CYnxOkU/gDW0crE1+hcuA==",
+  "dgSpecHash": "zC7j/QkeUHcUTgoyIj/2RMo7ZUwuj5GGSD8XpjSNLsaCEw8Cc0KX5gA1L8OLaL/u7jlKF7aHApng2c0Q9tdLpQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Catalin\\Desktop\\Medical System\\medical-informatic-system\\MedicalSystem\\MedicalSystem.csproj",
+  "projectFilePath": "C:\\Users\\Catalin\\Desktop\\MEdical ceva\\medical-informatic-system\\MedicalSystem\\MedicalSystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Catalin\\.nuget\\packages\\libsassbuilder\\2.0.1\\libsassbuilder.2.0.1.nupkg.sha512",
     "C:\\Users\\Catalin\\.nuget\\packages\\microsoft.aspnetcore.authorization\\5.0.0\\microsoft.aspnetcore.authorization.5.0.0.nupkg.sha512",
